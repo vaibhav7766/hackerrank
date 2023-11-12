@@ -17,12 +17,10 @@ def digit_sum(n):
 
 def best(n):
     divisors = get_divisors(n)
-    d = {}
     temp = 0
     max_sum = 0
     for i in divisors:
         sn = digit_sum(i)
-        d[i] = sn
         if max_sum < sn:
             max_sum = sn
             temp = i
