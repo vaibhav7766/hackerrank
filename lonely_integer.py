@@ -18,10 +18,17 @@ input=sys.stdin.readline
 #
 
 def lonelyinteger(a):
-    d=Counter(a)
-    for i in d.keys():
-        if d[i]==1:
-            return i
+    #Using Hashmap
+    # d=Counter(a)
+    # for i in d.keys():
+    #     if d[i]==1:
+    #         return i
+    
+    #Using XOR
+    s=0
+    for i in a:
+        s=s^i
+    return s
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
